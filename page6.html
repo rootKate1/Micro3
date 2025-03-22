@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar navbar-expand-lg dasw">
+            <span class="navbar-toggler-icon btn" id="btn-link" style="cursor: pointer;"></span>
+            <a class="navbar-brand" href="#">Какой-то сайт</a>
+            <div class="navbar-nav-21" >
+                <a class="nav-link" href="index.html">Микроразметка это</a> 
+                <a class="nav-link" href="page2.html">Задачи</a>
+                <a class="nav-link" href="page3.html">Виды</a>
+                <a class="nav-link" href="page4.html">Основные словари</a>
+                <a class="nav-link" href="page5.html">Синтаксис</a>
+                <a class="nav-link" href="page6.html">Добавление микроразметки</a>
+                <a class="nav-link" href="page7.html">Проверка микроразметки</a>
+            </div>
+        </nav>
+    </section>
+
+    <div class="side_link bs display-none" id="link">            
+        <div class="navbar-nav navbar-nav">
+            <a class="nav-link bor-bot" href="index.html">Микроразметка это</a> 
+            <a class="nav-link bor-bot" href="page2.html">Задачи</a>
+            <a class="nav-link bor-bot" href="page3.html">Виды</a>
+            <a class="nav-link bor-bot" href="page4.html">Основные словари</a>
+            <a class="nav-link bor-bot" href="page5.html">Синтаксис</a>
+            <a class="nav-link bor-bot" href="page6.html">Добавление микроразметки</a>
+            <a class="nav-link bor-bot" href="page7.html">Проверка микроразметки</a>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="box">
+            <h1>Как добавить микроразметку на сайт</h1>
+            <p>Попробуем добавить микроразметку на сайт вымышленной компании «ООО МикроМаркап». Чтобы разметить контакты, используем Schema.org.</p>
+            <img src="./image/page6-1.png" alt="" class="img">
+            <p class="img-text">Так блок с контактами выглядит до того, как разработчик настроил микроразметку</p>
+            <p>Дальше действуем по алгоритму:</p>
+            <p>1. Подбираем подходящий словарь на сайте схемы https://schema.org/. Для описания секции выбираем словарь Organization. </p>
+            <p>2. Указываем атрибуты, чтобы поисковый робот смог увидеть, что данные в секции используют разметку словарем.</p>
+            <img src="./image/page6-2.png" alt="" class="img">
+            <p class="img-text">Добавляем атрибут itemscope, который задает область связанных метаданных. Здесь же включаем связанный атрибут itemtype, где в качестве значения указываем URL-адрес используемого словаря Organization. В результате получается запись вида «ключ-значение»: itemtype="http://schema.org/Organization"</p>
+            <p>3.	Размечаем адрес организации. Schema.org предоставляет довольно широкий выбор вариантов, как можно разметить адрес. В этом случае нужно использовать атрибут itemprop, который задает свойство объекта для его описания. Используем itemprop со значением address, чтобы выделить в разметке адрес организации: itemprop="address"</p>
+            <img src="./image/page6-3.png" alt="" class="img">
+            <p class="img-text">Важный момент — itemprop заведомо оборачивает данные об адресе: Само описание данных «Адрес:» сюда включать не нужно</p>
+            <p>Аналогичным образом используем itemprop для разметки контактных данных: телефона и адреса электронной почты. В качестве значения используем telephone и email.</p>
+            <img src="./image/page6-4.png" alt="" class="img">
+            <p class="img-text">В итоге получаем запись вида itemprop="telephone" и itemprop="email"</p>
+            <p>Микроразметка для секции с данными об организации готова. Теперь нужно проверить её корректность с помощью одного из валидаторов: Google, Yandex или Schema.org. Даже если кажется, что ошибок нет, полезно специально «сломать» микроразметку и посмотреть, что посоветует исправить валидатор.</p>
+        </div>        
+    </section>
+
+    <section class="footer">
+        <nav class="navbar footer-block">
+            <div class="container-fluid">
+                <div>
+                Уляшева Екатерина
+                </div>
+            </div>
+        </nav>
+    </section>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
+    </html>
